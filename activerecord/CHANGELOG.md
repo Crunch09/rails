@@ -1,3 +1,12 @@
+*   Added `ActiveRecord::Relation#left_outer_joins`.
+
+    Example:
+        User.left_outer_joins(:posts)
+        => SELECT "users".* FROM "users" LEFT OUTER JOIN "posts" ON
+           "posts"."user_id" = "users"."id"
+
+    *Florian Thomas*
+
 *   Add `Table#name` to match `TableDefinition#name`.
 
     *Cody Cutrer*
